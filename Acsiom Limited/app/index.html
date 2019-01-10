@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Acsiom Limited</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+	<section id="first-screen" class="first-screen" data-csp="section-bg-image">
+		<header class="main-header" data-csp="header">
+			<div class="row">
+				<div class="columns large-6 medium-4 small-8">
+					<a href="/" class="m-logo">
+						<img src="images/logo.svg" alt="logo" class="m-logo___img" data-csp="header-logo">
+					</a>
+				</div>
+				<div class="columns large-6 medium-8 small-4">
+					<nav class="main-menu">
+						<button class="phone-button phone-button__animx menu-trigger">
+							<span class="span">menu toggle</span>
+						</button>
+						<ul class="main-menu__list">
+
+							<li class="main-menu__items">
+								<a href="#first-screen" class="main-menu__link smoothScroll" data-csp="header-home">home</a>
+							</li>
+							<li class="main-menu__items">
+								<a href="#second-screen" class="main-menu__link smoothScroll" data-csp="header-about">who we are</a>
+							</li>
+							<li class="main-menu__items">
+								<a href="#services-screen" class="main-menu__link smoothScroll" data-csp="header-services">services</a>
+							</li>
+							<li class="main-menu__items">
+								<a href="#contact-screen" class="main-menu__link smoothScroll" data-csp="header-contact">contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<div class="row">
+			<div class="columns large-offset-0 large-6 medium-offset-2 medium-8 small-offset-1 small-10">
+				<div class="ft-screen__content">
+					<div class="main-title">
+						<h1><span>Acsiom Limited</span><br>Home of Exceptional Streaming Media and Secure VPN Services</h1>
+					</div>
+					<p class="subtitle">
+						Giving you privacy and security through top VPN
+						services and providing the best online streaming
+						media.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="services-screen" class="services-screen" data-csp="section-services">
+		<div class="row expanded text-center">
+			<div class="columns large-4 medium-12 small-12">
+				<div class="srv-title">
+					<i class="fas fa-tablet-alt" data-csp="ser-icon"></i>
+					<h3>Our Services are Accessible Via Any Device</h3>
+				</div>
+				<p class="srv-text">Android, Windows, iOS, or Mac – you can get on
+				and start using our services</p>
+			</div>
+			<div class="columns large-4 medium-12 small-12">
+				<div class="srv-title">
+					<i class="fas fa-question-circle" data-csp="ser-icon"></i>
+					<h3>Why Choose Us?</h3>
+				</div>
+				<p class="srv-text">We save you time and effort and offer more
+					features than any other service out there. And,
+				we do it for budget-friendly prices!</p>
+			</div>
+			<div class="columns large-4 medium-12 small-12">
+				<div class="srv-title">
+					<i class="fas fa-tasks" data-csp="ser-icon"></i>
+					<h3>Simple Setup</h3>
+				</div>
+				<p class="srv-text">Our interface makes it simple to setup and get
+				going with all of our services.</p>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section id="second-screen" class="second-screen" data-csp="section-bg-image">
+		<div class="row expanded">
+			<div class="columns large-offset-6 large-6 medium-12 small-12">
+				<div class="second-wrp-content">
+					<div class="add-wrrap">
+						<span class="second-title">
+							About Our Services
+						</span>
+						<p class="second-text">
+							We’ve developed services that keep you safe
+							when you’re on the web and that give you
+							access to the best entertainment media library
+							on the web.
+						</p>
+						<a class="about-us__button button button_primery smoothScroll" href="#contacts_form"  data-csp="section-aboutbtn">let's chat</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact-screen" class="contact-screen" data-csp="section-contact">
+		<div class="row text-center">
+			<div class="columns large-12">
+				<div class="wrapper-ct-title">
+					<h1>Need Assistance?</h1>
+				</div>
+				<p class="ct-text">
+					We’re available 24/7 at the contact info listed
+					here.	
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<form method="post" action="#" name="contacts_form" id="contacts_form" class="contact__form large-8 large-offset-2 medium-8 medium-offset-2 columns" data-csp="cntform-contact" data-abide novalidate>
+				<p id="formMessage"></p>
+				<div class="row">
+					<label class="columns large-6 medium-12 small-12">
+						<input type="text" placeholder="Your Name" name="name" id="name" class="contact__input input" data-csp="cntform-name" required="">
+						<span class="form-error" data-csp="cntform-name-error">
+							Please enter your name
+						</span>
+					</label>
+					<label class="columns large-6 medium-12 small-12">
+						<input type="email" placeholder="Your Email" name="email" id="email" class="contact__input input" data-csp="cntform-email" required="">
+						<span class="form-error" data-csp="cntform-email-error">
+							Please enter your email
+						</span>
+					</label>
+					<label class="columns large-12 small-12">
+						<textarea name="message" placeholder="Question / Comment" class="contact__textarea textarea" rows="5" data-csp="cntform-message" required=""></textarea>
+						<span class="form-error" data-csp="cntform-message-error">
+							Please enter your message
+						</span>
+					</label>
+				</div>
+				<button type="submit" class="contact__button button button_primery" data-csp="cntform-submitbtn">Send message</button>
+			</form>
+		</div>
+
+	</section>
+	<footer id="main-footer" class="main-footer" data-csp="main-footer">
+		<div class="row text-center">
+			<div class="columns large-12">
+				<div class="row mb">
+					<div class="columns large-4 large-offset-0 medium-6 medium-offset-3 small-12 small-offset-0 phone-mb">
+						<i class="fas fa-envelope" data-csp="fot-icon"></i>
+						<div class="wrapp-email">
+							<a href="#" class="email-link">
+								support@acsiomlimited.com
+							</a>
+						</div>
+					</div>
+					<div class="columns large-4 large-offset-0 medium-6 medium-offset-3 small-12 small-offset-0 phone-mb">
+						
+						<div class="wrapp-text">
+							<i class="fas fa-map-marker-alt" data-csp="fot-icon"></i>
+							<span class="info-text">
+								Acsiom Limited 
+							</span>
+							<span class="info-text">
+								70 Woodvale Walk
+							</span>
+							<span class="info-text">
+								London
+							</span>
+							<span class="info-text">
+								SE27 0EY
+							</span>
+							<span class="info-text">
+								United Kingdom
+							</span>
+						</div>						
+					</div>
+					<div class="columns large-4 large-offset-0 medium-6 medium-offset-3 small-12 small-offset-0">
+						<i class="fas fa-mobile" data-csp="fot-icon"></i>
+						<div class="wrapp-phone">
+							<a href="#" class="phone-link">
+								0234-123-9999
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="columns large-12">
+				<p>
+					<script type="text/javascript">
+						var date = new Date;
+						document.write("&copy; ", date.getFullYear(), " Acteon Limited. All rights reserved");
+					</script>
+				</p>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/app.min.js"></script>
+</body>
+</html>

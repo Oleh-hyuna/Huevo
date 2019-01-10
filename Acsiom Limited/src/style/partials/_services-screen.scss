@@ -1,0 +1,76 @@
+.services-screen{
+	$border-color: #334351;
+	$border-size: 2px;
+	$border-child: 1px;
+	.columns{
+		padding: 2em;
+		color: $black-color;
+		font-weight: 400;
+		background-color: $bg-color-srv;
+		border: $border-size solid $border-color;
+		&:first-child{
+			border-right: $border-child solid $border-color;
+			@media screen and (max-width: 1023px){
+				border-bottom: 0;
+				border-right: $border-size solid $border-color;
+			}
+		}
+		&:nth-child(2){
+			border-left: $border-child solid $border-color;
+			border-right: $border-child solid $border-color;
+			@media screen and (max-width: 1023px){
+				border-left: $border-size solid $border-color;
+				border-right: $border-size solid $border-color;
+				border-bottom: 0;
+
+			}
+		}
+		&:last-child{
+			border-left: $border-child solid $border-color;
+			@media screen and (max-width: 1023px){
+				border-left: $border-size solid $border-color;
+			}
+		}
+		&:hover .fas{
+			color: #313541;
+		}
+		&:hover h3{
+			color: $second-color;
+			transition-delay: 0.3s;
+		}
+		&:hover .srv-title::after{
+			width: 10%;
+			height: 5px;
+			transition-duration: $transition-duration;
+		}
+	}
+	.srv-title{
+		min-height: 86px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: .5em;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			width: 50%;
+			bottom: -2px;
+			height: 2px;
+			background-color: $second-color;
+			transition-duration: $transition-duration;
+		}
+		.fas{
+			margin-right: .6em;
+			font-size: 2em;
+			color: $second-color;
+		}
+		h3{
+			line-height: 1;
+			font-weight: 300;
+		}
+	}
+	.srv-text{
+		font-weight: 300;
+	}
+}

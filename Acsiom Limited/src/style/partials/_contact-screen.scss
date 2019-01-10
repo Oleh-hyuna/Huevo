@@ -1,0 +1,38 @@
+.contact-screen{
+	padding: 1em;
+	background-image: linear-gradient(-45deg, #fff 50%, $second-color 50%);
+	&:hover{
+		background-image: linear-gradient(135deg, #fff 50%, $second-color 50%);
+	}
+	color: $black-color;
+	.wrapper-ct-title{
+		& > *{
+			text-transform: capitalize;
+			font-family: $main-font-family;
+		}
+	}
+	.ct-text{
+		font-size: 1.2rem;
+	}
+	.contact__input, .contact__textarea{
+		box-shadow: 0 0 15px $main-color-text;
+	}
+	.contact__button{
+		background-color: transparent;
+		border: 1px solid $style-wrapp-color;
+		color: $style-wrapp-color;
+		@media screen and (min-width: 1145px){
+			border: 1px solid $white-color;
+			color: $white-color;
+		}
+		
+	}
+
+}
+
+@media screen and (min-width: 1145px) {
+	.contact-screen:hover .contact__button{
+		border: 1px solid $second-color;
+		color: $second-color;
+	}
+}

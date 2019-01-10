@@ -1,0 +1,45 @@
+.main-footer{
+	color: $main-color-text;
+	background-color: $style-wrapp-color;
+	padding: 1.5em;
+	
+	.wrapp-text{
+		.info-text{
+			display: block;
+		}	
+	}
+	
+	.wrapp-email{
+		display: inline-block;
+		.email-link{
+			color: $main-color-text;
+			border-bottom: 1px solid $second-color;
+			&:hover{
+				border-bottom: transparent;
+			}
+		}
+	}
+	.wrapp-phone{
+		display: inline-block;
+		.phone-link{
+			color: $main-color-text;
+			border-bottom: 1px solid $second-color;
+			&:hover{
+				border-bottom: transparent;
+			}
+		}
+	}
+	.mb{
+		margin-bottom: 2em;
+	}
+	.fas{
+		font-size: 20px;
+		color: $second-color;
+	}
+
+}
+@media screen and (max-width: 1024px){
+	.phone-mb{
+		margin-bottom: 1em;
+	}
+}
