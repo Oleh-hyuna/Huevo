@@ -1,9 +1,7 @@
 .contact-screen{
 	padding: 1em;
-	background-image: linear-gradient(-45deg, #fff 50%, $second-color 50%);
-	&:hover{
-		background-image: linear-gradient(135deg, #fff 50%, $second-color 50%);
-	}
+	background-image: linear-gradient(-45deg, #fff 20%, rgba($white-color, 0) 25%, rgba(#334351, .9) 75%, rgba(#334351, .9) 75%);
+	
 	color: $black-color;
 	.wrapper-ct-title{
 		& > *{

@@ -1,0 +1,63 @@
+.second-screen{
+	background-color: #fffff1;
+	background-image: url($img-path + 'second-screen.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: relative;
+	margin-bottom: .5em;
+		&::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(45deg, rgba(#08051b, .3) 70%, rgba(#08051b, .3) 100%);
+	}
+	.second-wrp-content{
+		min-height: 600px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		padding: 1em;
+		.add-wrrap{
+			font-size: 1.2em;
+			padding: 1em;
+			background-color: rgba($color-dec-line, .8);
+			transform: skewX(-3deg);
+			.second-title{
+				font-weight: 700;
+				margin-bottom: .5em;
+				font-size: 1.3em;
+			}
+			.second-text{
+				line-height: 1.2;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				top: 20%;
+				right: -5%;
+				width: 9%;
+				height: 2%;
+				background-color: #dee7ea;
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				bottom: 20%;
+				right: -5%;
+				width: 15%;
+				height: 2%;
+				background-color: #d3e1e8;
+			}
+			.about-us__button {
+				font-size: .9em;
+				text-transform: capitalize;
+				font-weight: 300;
+				background-color: rgba($color-header, .8);
+				color: $white-color;
+			}
+		}
+	}
+}

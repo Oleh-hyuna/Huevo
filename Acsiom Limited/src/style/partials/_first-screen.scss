@@ -140,15 +140,15 @@
 		}
 		
 		.main-title{
-			margin-bottom: .3em;
 			& > * {
 				color: rgba($main-color-text, 1);
 				font-size: 2em;
 				font-family: $main-font-family;
 				font-weight: 300;
 				@media screen and (max-width: 432px){
-					font-size: 1.5em;
-
+					font-size: 1.3em;
+					text-align: right;
+					padding: .3em;
 				}
 				
 			}
@@ -158,16 +158,18 @@
 				color: $main-color-text;
 				border-bottom: 3px solid $second-color;
 				@media screen and (max-width: 432px){
-					font-size: 1.5em;
-
+					font-size: 1.4em;
+					font-weight: 900;
 				}
 			}
 		}
 		.subtitle{
-			color: rgba($main-color-text, .7);
+			color: rgba($main-color-text, .6);
 			font-family: $main-font-family;
 			@media screen and (max-width: 432px){
 				font-size: 1em;
+				text-align: justify;
+				padding: .3em;
 			}
 
 		}

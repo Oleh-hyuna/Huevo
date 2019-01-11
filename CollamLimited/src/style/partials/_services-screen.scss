@@ -1,0 +1,47 @@
+.services-screen{
+	position: relative;
+	color: $color-header;
+	background-color: #c0d8e2;
+	font-size: 1.2em;
+	margin-bottom: .5em;
+	.columns{
+		min-height: 185px;
+		padding: 1em;
+		&:first-child{
+			background-color: #dee7ea;
+		}
+		&:nth-child(2){
+			background-color: #d3e1e8;
+		}
+		&:last-child{
+			background-color: #c0d8e2;
+		}
+		&:hover .fas{
+			color: $color-header;
+			padding-bottom: .2em;
+			border-bottom: 2px solid $color-dec-line;
+		}
+		&:hover .srv-title h3{
+			border-bottom: none;
+			color: $color-dec-line;
+		}
+	}
+	.fas{
+		color: $color-dec-line;
+	}
+	.wrapp-services{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.srv-title h3{
+		border-bottom: 2px solid $color-dec-line;
+		line-height: 1;
+	}
+	.srv-title{
+		margin-bottom: .2em;
+		line-height: 1.2;
+	}
+}
