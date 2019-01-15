@@ -1,0 +1,41 @@
+.main-footer{
+	color: $white-color;
+	background-color: rgba($color-header, .9);
+	padding: 1em;
+	.columns{
+		@media screen and (max-width: 1023px){
+				margin-bottom: 1em;
+			}
+	}
+	.footer-icon{
+		max-width: 10%;
+		animation: footers-icon 1s ease infinite;
+		margin-bottom: .5em;
+	}
+	.email-link{
+		color: #dee7ea;
+		border-bottom: 2px solid #839933;
+		&:hover{
+			border-bottom: none;
+		}
+	}
+	.phone-link{
+		color: #dee7ea;
+		border-bottom: 2px solid #839933;
+		&:hover{
+			border-bottom: none;
+		}
+	}
+}
+
+@keyframes footers-icon{ 
+	0% {     
+		transform: scale(1);
+	} 
+	50%{
+		transform: scale(1.1);
+	}  
+	100%{
+		transform: scale(1.2);
+	}
+}

@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+@import "../../node_modules/foundation-sites/scss/settings/settings";
+@import "../../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-everything;
+@include foundation-flex-classes;
+@include foundation-flex-grid; 
+
+
+@import "partials/variables";
+@import "partials/common";
+@import "partials/first-screen";
+@import "partials/second-screen";
+@import "partials/main-footer";
+@import "partials/phone-button";
+@import "partials/contact-screen";
+
+
