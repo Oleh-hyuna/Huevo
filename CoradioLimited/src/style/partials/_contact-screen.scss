@@ -1,12 +1,11 @@
 .contact-screen{
-	padding-top: 3em;
-	padding-bottom: 3em;
+	margin-bottom: 3em;
 	.row-style{
-		min-height: 100px;
 		background-color: #F4F5F7;
-		margin-bottom: 4em;
+
 	}
 	.cst-column{
+		background-color: #fff;
 		box-shadow: 0 10px 40px rgba(0,0,0, .6);
 		display: flex;
 		align-items: center;
