@@ -1,5 +1,11 @@
 .contact-screen{
-	padding: 1em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	.cst-column{
+		box-shadow: 0 10px 40px rgba(0,0,0, .6);
+		display: flex;
+		align-items: center;
+	}
 	.contact-all-content{
 		font-size: 1.2em;
 		padding: 1em;
@@ -7,9 +13,6 @@
 		cursor: pointer;
 		@media screen and (max-width: 639px){
 			margin-bottom: .5em;
-		}
-		&:hover{
-			box-shadow: 0 10px 40px rgba(0,0,0, .6);
 		}
 		.contact-title{
 			margin-bottom: .5em;
