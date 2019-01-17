@@ -1,0 +1,208 @@
+.main-section{
+	// display: none; /// delete 
+	min-height: 100vh;
+	max-width: 100%;
+	position: relative;
+	background-color: transparent;
+	overflow:hidden;
+	&::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to right,#368527 0%,#d2b829 100%);
+		opacity: .8;
+		z-index: 1;
+	}
+	&::after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: url($img-path + 'image-bg.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		animation: matrix3d 10s linear;
+		z-index: 0;
+	}
+	
+	.main-header{
+		position: relative;
+		z-index: 2;
+		.st-row{
+			@media screen and (max-width: 639px){
+				padding-top: 1em;
+			}
+		}
+		&.fixed-menu-nav{
+			z-index: 9999;
+			position: fixed; 
+			left: 0; 
+			top: 0; 
+			width: 100%;
+			background-color: $white-color;
+			.fixed-menu-color{
+				color: #303030;
+			}
+		}
+		&__wrp-logo{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.logo-color {
+				fill: $white-color;
+			}
+			.fixed-logo-color{
+				fill: #303030;
+			}
+		}
+		&__lnk-logo{
+			display: block;
+		}
+		.main-menu{
+			min-height: 120px;
+			display: flex;
+			align-items: center;
+			&__items{
+
+			}
+			&__list{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media screen and (max-width: 639px){
+					display: block;
+				}
+			}
+			&__link{
+				text-transform: uppercase;
+				font-size: 1em;
+				font-weight: 500;
+				color: $white-color;
+				font-family: $main-font-family;
+				position: relative;
+				@media screen and (min-width: 630px){
+					&::before{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: black;
+						transition: width .5s ease-in-out, left .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&::after{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: black;
+						transition: width .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&:hover::before{
+						width: 50%;
+						left: 0;
+					}
+					&:hover::after{
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+	.main-content{
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		@media screen and (max-width: 726px){
+			transform: translate(0, 0) !important;
+		}
+		&__title{
+			& > * {
+				font-family: $main-font-family;
+				font-size: 3em;
+				font-weight: 600;
+				line-height: 1.2;
+			}
+			& span{
+				font-size: 1.7em;
+			}
+		}
+		&__subtitle{
+			font-weight: 400;
+			font-size: 1.5em;
+			color: rgba($white-color, .7);
+			font-family: $second-font-family;
+			line-height: 2;
+		}
+		&__button{
+			@include button;
+			line-height: 2;
+			padding: 12px 0;
+			padding-right: 27px;
+			padding-left: 35px;
+			&::before{
+				content: '';
+				position: absolute;
+				left: 16%;
+				top: 50%;
+				transform: translateY(-50%);	
+				background-color: transparent;
+				border: 5px solid transparent;
+				border-left-color: green; 
+			}
+			&::after{
+				content: "";
+				height: 200%;
+				left: -230%;
+				opacity: 0;
+				position: absolute;
+				top: -20%;
+				transform: rotate(-30deg);
+				width: 200%;
+
+				background: rgba(255, 255, 255, 0.13);
+				background: linear-gradient(
+					to right, 
+					rgba(255, 255, 255, 0.13) 0%,
+					rgba(255, 255, 255, 0.13) 77%,
+					rgba(255, 255, 255, 0.5) 92%,
+					rgba(255, 255, 255, 0.0) 100%
+					);
+			}
+			&:hover::after {
+				left: -50%;
+				opacity: 1;
+				top: -50%;
+				transition-duration: 0.7s, 0.7s, 0.15s;
+				transition-property: left, top, opacity;
+				transition-timing-function: ease;
+			}
+			&:active::after {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+@keyframes matrix3d{
+	0%, 100%{
+		transform: matrix3d(1,	0,	0,	0, 0,	1,	0,	0, 0,	0,	1,	0, 0,	0,	0,	1);
+	}
+	50%{
+		transform: matrix3d(1.08711, 0.000119325, 0, 0, -0.000119325, 1.08711, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		transform-origin: 0% 0% 0px;
+	}
+}

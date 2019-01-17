@@ -1,0 +1,78 @@
+.contact-screen{
+	background-color: #F7F7F7;
+	padding: 4em 0;
+	position: relative;
+	color: $text-color;
+	.st-contact-wrraper{
+		position: absolute;
+		width: 55%;
+		height: 90%;
+		transform: translate(-33%, -8%);
+		background-color: #ECECEC;
+		@media screen and (max-width: 1023px){
+			width: 100%;
+		}
+	}
+	.contact-all-content{
+		position: relative;
+		.contact-title{
+			font-size: 34px;
+			font-family: $main-font-family;
+			font-weight: 600;
+			line-height: 1.1;
+			margin-bottom: .2em;
+			& span{
+				color: #50903e;
+			}
+		}
+		.ct-text{
+			margin-bottom: .5em;
+		}
+
+	}
+	.contact_form{
+		position: relative;
+		.contact__button{
+			@include button;
+			color: #F7F7F7;
+			font-weight: 600;
+			background-image: linear-gradient(to right,#368527 0%,#d2b829 100%);
+			border: 2px solid $white-color;
+			border-width: 2px 1px 2px 2px;
+			padding-right: 27px;
+			padding-left: 35px;
+			line-height: 2.5;
+			margin-bottom: 0;
+			&::after{
+				content: "";
+				height: 200%;
+				left: -230%;
+				opacity: 0;
+				position: absolute;
+				top: -20%;
+				transform: rotate(0deg);
+				width: 200%;
+
+				background: rgba(255, 255, 255, 0.13);
+				background: linear-gradient(
+					to right, 
+					rgba(255, 255, 255, 0.13) 0%,
+					rgba(255, 255, 255, 0.13) 77%,
+					rgba(255, 255, 255, 0.5) 92%,
+					rgba(255, 255, 255, 0.0) 100%
+					);
+			}
+			&:hover::after {
+				left: -50%;
+				opacity: 1;
+				top: -50%;
+				transition-duration: 0.7s, 0.7s, 0.15s;
+				transition-property: left, top, opacity;
+				transition-timing-function: ease;
+			}
+			&:active::after {
+				opacity: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+@mixin button {
+  position: relative;
+  overflow: hidden;
+  min-width: 0px;
+  height: 50px;
+  display: inline-block;
+  font-weight: 500;
+  font-family: $main-font-family;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $text-color;
+  text-decoration: none;
+  text-align: center;
+  background-color: $white-color;
+}
+
