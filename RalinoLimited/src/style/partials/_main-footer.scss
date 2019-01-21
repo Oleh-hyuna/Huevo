@@ -18,8 +18,12 @@
 				margin-right: .5em;
 				max-width: 30px;
 			}
-			@include max-639 {
-				margin-bottom: .5em;
+			&:not(:last-child){
+				@include max-1023 {
+					margin-bottom: .5em;
+				}
+			}
+			@include max-1023 {
 				border: 1px solid white;
 			}
 		}
