@@ -1,0 +1,50 @@
+.second-screen{
+	padding: 4em 0;
+	color: $text-color;
+	background-color: #f2f2f2;
+	padding-bottom: 400px;
+	@media screen and (max-width: 1023px){
+		padding-bottom: 1em;
+	}
+	.second-screen-bg{
+		margin-bottom: 1em;
+		@media screen and (max-width: 1023px){
+			margin-bottom: 1em;
+		}
+	}
+	.second-content__button{
+		@include button;
+	}
+	.second-wrp-content{
+		margin-bottom: 50px;
+		@media screen and (max-width: 1023px){
+			align-items: center;
+		}
+		@media screen and (max-width: 499px){
+			margin-bottom: 10px;
+		}
+		.second-title{
+			flex-grow: 1;
+			font-size: 35px;
+			font-family: $main-font-family;
+			font-weight: 300;
+			line-height: 1.1;
+			@media screen and (max-width: 1023px){
+				margin-bottom: .3em;
+			}
+			& span{
+				color: #50903e;
+			}
+		}
+		.second-text{
+			font-weight: 300;
+			flex-grow: 2;
+			color: #797979;
+			font-size: 16px;
+			@media screen and (max-width: 1023px){
+				margin-bottom: 1em;
+			}
+		}	
+
+	}
+}
