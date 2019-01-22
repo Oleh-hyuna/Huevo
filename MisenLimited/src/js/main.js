@@ -4,20 +4,20 @@
 //= partials/fetchAddress.js
 //= partials/wow.min.js
 
-window.onresize = () => {
-    // console.dir(document.body);
-    var overl = document.getElementById("testtt");
-    var column = document.getElementById("js-hack");
-    // console.log(document.body.clientWidth);
-    if (document.body.clientWidth <= 1023){
-      overl.classList.remove("hack-row");
-      column.classList.remove("st-row");
+// window.onresize = () => {
+//     // console.dir(document.body);
+//     var overl = document.getElementById("testtt");
+//     var column = document.getElementById("js-hack");
+//     // console.log(document.body.clientWidth);
+//     if (document.body.clientWidth <= 1023){
+//       overl.classList.remove("hack-row");
+//       column.classList.remove("st-row");
 
-    } else {
-     overl.classList.add("hack-row");
-     column.classList.add("st-row");
-   }
- }
+//     } else {
+//      overl.classList.add("hack-row");
+//      column.classList.add("st-row");
+//    }
+//  }
 
  $(document).foundation();
  new WOW().init(); 
