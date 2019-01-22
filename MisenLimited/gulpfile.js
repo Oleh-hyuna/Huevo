@@ -10,6 +10,7 @@ const gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
+    tiny = require('gulp-tinypng'),
     rename = require("gulp-rename"),
     browserSync = require("browser-sync"),
     terser = require('gulp-terser'),
@@ -94,6 +95,11 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest(path.app.fonts))
 });
 
+gulp.task('tinypng', function () {
+    gulp.src(path.src.img)
+        .pipe(tiny('y6vBpNQt3CR2JSBRw1ZFDHpPXR84gKrR'))
+        .pipe(gulp.dest(path.app.img));
+});
 
 
 gulp.task('watch', () => {

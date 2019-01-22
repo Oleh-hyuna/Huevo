@@ -67,10 +67,12 @@
 		.wrapp-phone{
 			min-width: 230px;
 			&::after{
-				bottom: 30%;
+				bottom: 46%;
 			}
 			.phone-link{
+				display: block;
 				color: $text-color-subtitle;
+				margin-bottom: 1.1em;
 			}
 		}
 		.wrapp-email{
@@ -80,6 +82,7 @@
 		}
 		.wrapp-text{
 			min-width: 230px;
+			margin-bottom: 1.1em;
 		}
 	}
 	.pd-1023{

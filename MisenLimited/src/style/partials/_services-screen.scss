@@ -15,27 +15,29 @@
 		.content-wrapper{
 			height: 100%;
 			position: relative;
-			&::before{
-				content: '';
-				position: absolute;
-				top: 34%;
-				width: 50%;
-				height: .5%;
-				background-color: #28B2D1;
-			}
 			&::after{
 				content: '';
 				position: absolute;
 				width: 100%;
 				bottom: 0;
 				left: 0;
-				height: .5%;
+				height: 2px;
 				background-color: #48E7C1;
 				border-top-left-radius: 100%;
 				border-top-right-radius: 100%;
 			}
 			.icon-wrapper{
 				margin-bottom: 35px;
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -30%;
+					width: 45%;
+					height: 2px;
+					background-color: #28B2D1;
+				}
 			}
 			.serv-title{
 				display: flex;
