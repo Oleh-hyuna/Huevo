@@ -1,0 +1,11 @@
+.main-footer{
+	color: $main-color-text;
+	background-color: #272727;
+	padding: 1.5em 0;
+	.footer-copyright{
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+
+}
