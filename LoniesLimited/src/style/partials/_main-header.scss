@@ -1,0 +1,118 @@
+	.main-header{
+		position: relative;
+		z-index: 10;
+		background-color: $white-color;
+		box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
+		.st-row{
+			@media screen and (max-width: 639px){
+				padding: 1em 0;
+			}
+		}
+		&.fixed-menu-nav{
+			z-index: 9999;
+			position: fixed; 
+			left: 0; 
+			top: 0; 
+			width: 100%;
+			background-color: $white-color;
+			.fixed-menu-color{
+				color: $text-color;
+			}
+		}
+		&__wrp-logo{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.logo-color {
+				fill: $white-color;
+			}
+			.fixed-logo-color{
+				fill: #303030;
+			}
+		}
+		&__lnk-logo{
+			display: flex;
+			align-items: center;
+			.logo-img {
+				margin-right: .5em;
+			}
+			.logo-text{
+				display: block;
+				font-family: $main-font-family;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: $black-color;
+				font-size: 1.8em;
+				line-height: 1;
+			}
+		}
+		.main-menu{
+			min-height: 80px;
+			display: flex;
+			align-items: center;
+			&__items{
+
+			}
+			&__list{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media screen and (max-width: 639px){
+					display: block;
+				}
+			}
+			&__link{
+				text-transform: capitalize;
+				font-size: 16px;
+				font-weight: 600;
+				color: $text-color;
+				font-family: $main-font-family;
+				position: relative;
+				&:hover &.active{
+					border: 0;
+				}
+				&.active{
+					color: $light-green;
+					border-bottom: 2px solid $light-green;
+					&:hover {
+						border: 0;
+					}
+				}
+				&:hover{
+					color: $light-green;
+				}
+				@media screen and (min-width: 630px){
+					&::before{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out, left .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&::after{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&:hover::before{
+						width: 50%;
+						left: 0;
+					}
+					&:hover::after{
+						width: 50%;
+					}
+				}
+			}
+		}
+	}

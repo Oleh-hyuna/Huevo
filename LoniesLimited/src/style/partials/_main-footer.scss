@@ -1,0 +1,48 @@
+.main-footer{
+	color: $main-color-text;
+	background-color: #272727;
+	padding: 6em 0 0;
+	background-image: url($img-path + 'bg-footer.jpg');
+	min-height: 300px;
+	@include bg-settings;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	.wrapper-ft-info{
+		font-family: $main-font-family;
+		font-weight: 400;
+		.decor-wrapper{
+			.title{
+				text-transform: uppercase;
+				font-weight: 600;
+				font-size: 16px;
+				color: rgba($light-green, .9);
+			}
+			.wrapp-text{	
+				font-size: 15px;
+			}
+		}
+		.phone-link, .email-link{
+			color: $white-color;
+			font-size: 16px;
+		}
+
+	}
+	.decor-wrapper{
+		@include max-1023{
+			margin-bottom: 1.5em;
+		}
+	}
+	.wrapper-ft-copyright{
+		padding: 1em 0;
+		background-color: #fff;
+	}
+	.footer-copyright{
+		color: black;
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+}
