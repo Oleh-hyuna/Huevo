@@ -1,0 +1,51 @@
+.second-section{
+	padding: 3em 0;
+	min-height: 720px;
+	background-color: rgba(255,255,255,1);
+	color: $text-color-second;
+	@media screen and (max-width: 740px){
+		min-height: 100px;
+	}
+	.wrraper-all-title{
+		color: #000;
+	}
+	.wrapper-scd-image{
+		position: relative;
+		cursor: pointer;
+		transition: all 2s ease;
+		&:hover img{
+			border-bottom-left-radius: 0;
+			border-top-right-radius: 0;
+			transition: all 2s ease;
+		}
+		&:not(:hover) img{
+			transition: all 2s ease;
+		}
+		& img{
+			border-bottom-left-radius: 60%;
+			border-top-right-radius: 60%;
+		}
+	}
+	.second-wrp-content{
+		margin-bottom: 2em;
+		padding: 1em;
+		height: 100%;
+		.second-title{
+			font-size: 30px;
+			font-weight: 400;
+			line-height: 1.4;
+			margin-bottom: .4em;
+		}
+		.second-text{
+			font-size: 16px;
+			color: $text-color-subtitle;
+			margin-bottom: 1em;
+		}
+		.second-content__button {
+			@include button;
+			&:hover{
+				border: 2px solid $black-color;
+			}
+		}
+	}
+}

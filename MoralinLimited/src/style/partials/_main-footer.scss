@@ -1,0 +1,75 @@
+.main-footer{
+	color: $white-color;
+	background-image: url($img-path + 'main-bg.jpg');
+	@include bg-settings;
+	padding: 3em 0 0;
+	.wrapper-ct-icon{
+		margin: 0 auto;
+		max-width: 70px;
+		border-radius: 50%;
+		border: 2px solid #000;
+		background-color: #fff;
+		min-height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 40px;
+		}
+	}
+	.footer-copyright{
+		padding: 1em 0;
+		border-top: 1px solid #f3f3f3;
+		color: $black-color;
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+	.decor-wrapper{
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		text-align: center;
+		@include max-1023{
+			justify-content: center;
+		}
+		.text{
+			color: $white-color;
+			font-weight: 500;
+		}
+		.dc{
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				width: 42%;
+				height: 2px;
+				background-color: #48E7C1;
+				bottom: 0;
+				left: 28%;
+			}
+		}
+		.wrapp-phone{
+			min-width: 230px;
+			&::after{
+				bottom: 46%;
+			}
+			.phone-link{
+				display: block;
+				color: $black-color;
+			}
+		}
+		.wrapp-email{
+			.email-link{
+				color: $black-color;
+			}
+		}
+		.wrapp-text{
+			min-width: 230px;
+			margin-bottom: 1.1em;
+		}
+	}
+
+}

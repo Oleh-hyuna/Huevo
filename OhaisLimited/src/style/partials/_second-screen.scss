@@ -1,0 +1,75 @@
+.second-section{
+	padding: 3em 0;
+	background-color: #F7F9FF;
+	background-image: url($img-path + 'info-bg.jpg');
+	@include bg-settings;
+	color: $white-color;
+	@media screen and (max-width: 639px){
+		padding: 6em 0;
+	}
+	.second-wrp-content{
+		padding: 1em;
+		min-height: 600px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		@media screen and (max-width: 639px){
+			min-height: 280px;
+		}
+		.second-title{
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				width: 60%;
+				height: 1px;
+				left: -20%;
+				top: 45%;
+				background-color: rgba($active-link-color, .5);
+			}
+			& h2{
+				font-size: 50px;
+				font-weight: 200;
+				line-height: 1.5;
+				margin-bottom: .4em;
+				& span{
+					display: block;
+				}
+			}
+		}
+		.second-text{
+			font-size: 16px;
+			line-height: 1.6;
+			color: #b1bac2;
+			margin-bottom: 1em;
+		}
+	}
+	.d-flex{
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 639px){
+			justify-content: center;
+		}
+	}
+	.wrapper-img{
+		position: relative;
+		box-shadow: 0 160px 160px $black-color;
+		@media screen and (max-width: 639px){
+			box-shadow: 0 60px 60px $black-color;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($black-color, .6);
+		}
+		.content-icon{
+			max-width: 100%;
+		}
+
+	}
+}

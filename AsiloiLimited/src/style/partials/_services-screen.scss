@@ -1,0 +1,39 @@
+.services-section{
+	padding: 3em 0;
+	background-color: $black-color;
+	.st-columns{
+		min-height: 500px;
+		padding: 50px;
+		@include max-1023{
+			min-height: 300px;
+			&:not(:last-child){
+				margin-bottom: 2em;
+			}
+		}
+		.content-wrapper{
+			height: 100%;
+			.icon-wrapper{
+				margin-bottom: 35px;
+				display: flex;
+				justify-content: center;
+			}
+			.serv-title{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 60px;
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 1.7;
+				margin-bottom: .8em;
+			}
+			.serv-subtitle{
+				font-size: 16px;
+				color: $text-color-subtitle;
+				@include max-1023{
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}	
+}

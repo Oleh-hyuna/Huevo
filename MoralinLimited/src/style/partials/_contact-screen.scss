@@ -1,0 +1,57 @@
+.contact-screen{
+	padding: 3em 0;
+	min-height: 700px;
+	background-image: url($img-path + 'contact-bg.jpg');
+	@include bg-settings;
+	color: $black-color;
+	.mb{
+		margin-bottom: 1em;
+	}
+	.contact__input{
+		background-color: rgba($black-color, .4);
+		color: $white-color;
+	}
+	.contact__textarea{
+		background-color: rgba($black-color, .4);
+		color: $white-color;
+	}
+	.contact-all-content{
+		position: relative;
+		z-index: 1;
+		margin-bottom: 2em;
+		.ct-title{
+			font-size: 40px;
+			font-weight: 300;
+			line-height: 1.4;
+			margin-bottom: .4em;
+		}
+		.ct-text{
+			font-size: 15px;
+			line-height: 1.5;
+			color: $text-color-subtitle;
+			margin-bottom: 1em;
+		}
+	}
+	.wrapper-form{
+		position: relative;
+		z-index: 1;
+		margin-bottom: 1em;
+		.contact__button{
+			@include button;
+			background-color: transparent;
+			color: $black-color;
+			border: 2px solid $black-color;
+			&:hover{
+				background-color: white;
+				border: 2px solid $black-color;
+				color: $black-color;
+			}
+		}
+	}
+	
+	.pd-1023{
+		@include max-1023{
+			padding: 2em 0;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.main-footer{
+	color: $black-color;
+	background-color: #fff;
+	padding: 3em 0;
+	.footer-copyright{
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+
+}

@@ -62,15 +62,15 @@ $("#contacts_form").on("submit", function (ev, elem) {
     ev.preventDefault();
 });
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "sergifmedialimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzZXJnaWZtZWRpYWxpbWl0ZWQuY29tIiwiaWF0IjoxNTQ4MTcxODMzMTMzLCJleHAiOjE1Nzk3MDc4MzMxMzMsImF1ZCI6InNlcmdpZm1lZGlhbGltaXRlZC5jb20iLCJzdWIiOiJzZXJnaWZtZWRpYWxpbWl0ZWQuY29tIn0.mAaE1syotUxBY00r3WCfOt4KUarW8OZxOfjY6XxYhrU",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@sergifmedialimited.com"
 });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
+    site: "fairielight.com", // Any site from the Company
+    corp_id: "618", // Company ID
     country_code: "UK",
     addressContainer: $('.addressContainer')
 });

@@ -1,0 +1,50 @@
+.services-section{
+	color: $black-color;
+	background-color: $white-color;
+	font-family: $second-font-family;
+	border-bottom: 1px solid $decor-line-color;
+	.st-columns {
+		.content-wrapper{
+			height: 100%;
+			padding: 50px 25px;
+			position: relative;
+			&::before, &::after{
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 20%;
+				background-color: $decor-line-color;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			&::before {
+				top: 0;
+			}
+			.icon-wrapper{
+				margin-bottom: 35px;
+				display: flex;
+				justify-content: center;
+			}
+			.serv-title{
+				text-transform: uppercase;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 1.5;
+				letter-spacing: 1px;
+				margin-bottom: .8em;
+			}
+			.serv-subtitle{
+				font-size: 13px;
+				color: $text-color-subtitle;
+				line-height: 1.8;
+				@include max-1023{
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}	
+}
