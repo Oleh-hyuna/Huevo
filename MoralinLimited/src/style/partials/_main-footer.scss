@@ -34,6 +34,7 @@
 		text-align: center;
 		@include max-1023{
 			justify-content: center;
+			margin-bottom: 1em;
 		}
 		.text{
 			color: $white-color;
