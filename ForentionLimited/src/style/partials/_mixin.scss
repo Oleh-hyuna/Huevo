@@ -1,0 +1,34 @@
+@mixin button {
+  height: 50px;
+  padding: 12px 35px;
+  font-weight: 400;
+  font-family: $main-font-family;
+  font-size: 16px;
+  color: $buttom-color-text;
+  text-align: center;
+  background-color: $button-color;
+  line-height: 1.6;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  &:hover{
+    background-color: darken($button-color, 15%);
+  }
+}
+@mixin bg-settings {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@mixin max-1023 {
+  @media screen and (max-width: 1023px){
+    @content;
+  }
+}
+
+@mixin max-639 {
+  @media screen and (max-width: 639px){
+    @content;
+  }
+}

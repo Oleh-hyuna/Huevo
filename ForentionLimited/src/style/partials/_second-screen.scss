@@ -1,0 +1,50 @@
+.second-section{
+	min-height: 600px;
+	padding: 10em 0;
+	background-color: $white-color;
+	color: $text-color-second;
+	@media screen and (max-width: 740px){
+		min-height: 100px;
+	}
+	.second-wrp-content{
+		padding: 1em;
+		@include max-1023{
+			text-align: center;
+		}
+		.second-text{
+			font-size: 20px;
+			line-height: 1.5;
+			letter-spacing: 0.5px;
+			color: #888f96;
+			padding: 1.5em 0;
+		}
+	}
+}
+@keyframes test {
+	0%{
+		bottom: 0;
+		left: 0;
+	}
+	50%{
+		left: 20%;
+		bottom: 0;		
+	}
+	100%{
+		left: 20%;
+		bottom: 40%;
+	}
+}	
+@keyframes test2 {
+	0%{
+		top: 0;
+		left: 20%;
+	}
+	50%{
+		left: 0;
+		top: 0;		
+	}
+	100%{
+		left: 0;
+		top: 40%;
+	}
+} 
