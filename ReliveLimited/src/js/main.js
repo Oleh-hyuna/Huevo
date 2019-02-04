@@ -74,16 +74,16 @@ $("#contacts_form").on("submit", function (ev, elem) {
   ev.preventDefault();
 });
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "gonialdlimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnb25pYWxkbGltaXRlZC5jb20iLCJpYXQiOjE1NDg4NDQwNTQ0NjQsImV4cCI6MTU4MDM4MDA1NDQ2NCwiYXVkIjoiZ29uaWFsZGxpbWl0ZWQuY29tIiwic3ViIjoiZ29uaWFsZGxpbWl0ZWQuY29tIn0.aknxZaoCYd3guKhu9NvtnQqpuTEXJbhQ_o6bhJ2PLGg",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@gonialdlimited.com"
   });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
-    country_code: "UK",
+    site: "alphafuntime.com", // Any site from the Company
+    corp_id: "642", // Company ID
+    country_code: "CY",
     addressContainer: $('.addressContainer')
   });
 

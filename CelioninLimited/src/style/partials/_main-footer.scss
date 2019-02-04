@@ -1,0 +1,29 @@
+.main-footer{
+	color: $white-color;
+	background-color: #fff;
+	padding: 2em 0;
+	.wrapper-ct-icon{
+		margin: 0 auto;
+		max-width: 70px;
+		border-radius: 50%;
+		border: 2px solid #000;
+		background-color: #fff;
+		min-height: 70px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 40px;
+		}
+	}
+	.footer-copyright{
+		padding: 1em 0;
+		border-top: 1px solid #000000;
+		color: $black-color;
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+	
+
+}

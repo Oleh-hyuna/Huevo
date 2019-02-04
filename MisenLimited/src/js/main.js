@@ -79,16 +79,16 @@ $("#contacts_form").on("submit", function (ev, elem) {
   ev.preventDefault();
 });
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "paleirnlimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJwYWxlaXJubGltaXRlZC5jb20iLCJpYXQiOjE1NDg4NDQwODk4MTksImV4cCI6MTU4MDM4MDA4OTgxOSwiYXVkIjoicGFsZWlybmxpbWl0ZWQuY29tIiwic3ViIjoicGFsZWlybmxpbWl0ZWQuY29tIn0.4uPavyKsSGsTMrQs91qfzJAO0MZG1JG56VWzqCgPMnY",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@paleirnlimited.com"
   });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
-    country_code: "UK",
+    site: "auroraprima.com", // Any site from the Company
+    corp_id: "648", // Company ID
+    country_code: "CY",
     addressContainer: $('.addressContainer')
   });
 

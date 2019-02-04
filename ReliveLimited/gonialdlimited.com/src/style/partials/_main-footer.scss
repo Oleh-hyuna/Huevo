@@ -1,0 +1,82 @@
+.main-footer{
+	color: $main-color-text;
+	background-color: #141614;
+	padding: 1.5em 0 0;
+	
+	.wrapp-text{
+		.info-text{
+			display: block;
+		}	
+	}
+	
+	.wrapp-email{
+		display: inline-block;
+		.email-link{
+			color: $main-color-text;
+			border-bottom: 1px solid $second-color;
+			&:hover{
+				border-bottom: transparent;
+			}
+		}
+	}
+	.wrapp-phone{
+		display: inline-block;
+		.phone-link{
+			color: $main-color-text;
+			border-bottom: 1px solid $second-color;
+			&:hover{
+				border-bottom: transparent;
+			}
+		}
+	}
+	.mb{
+		margin-bottom: 2em;
+	}
+	.fas{
+		font-size: 20px;
+		color: $second-color;
+	}
+	.footer-menu{
+		&__list{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&__items{
+			padding: 0 .5em;
+			@media screen and (max-width: 396px){
+				padding: 0;
+			}
+			&:hover{
+				background-color: $white-color;
+			}
+			&:hover .footer-menu__link{
+				color: $text-color;
+			}
+		}
+		&__link{
+			display: block;
+			text-transform: uppercase;
+			color: $white-color;
+			font-weight: 300;
+		}
+	}
+	.st-row{
+		padding: 1.5em 0;
+		background-color: #000000;
+		@media screen and (max-width: 1024px){
+			border-top: 2px solid $white-color;
+		}
+	}
+	.footer-copyright{
+		@media screen and (max-width: 1024px){
+			margin-bottom: .5em;
+		}
+	}
+
+}
+@media screen and (max-width: 1024px){
+	.phone-mb{
+		margin-bottom: 1em;
+	}
+}

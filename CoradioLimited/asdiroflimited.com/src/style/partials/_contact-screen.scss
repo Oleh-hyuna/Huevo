@@ -1,0 +1,104 @@
+.contact-screen{
+	padding: 5em 0;
+	.row-style{
+		background-color: #F4F5F7;
+
+	}
+	.cst-column{
+		background-color: #fff;
+		box-shadow: 0 10px 40px rgba(0,0,0, .6);
+		display: flex;
+		align-items: center;
+		@media screen and (max-width: 639px){
+			margin-bottom: 2em;
+		}
+	}
+	.contact-all-content{
+		font-size: 1.2em;
+		padding: 1em;
+		position: relative;
+		cursor: pointer;
+		
+		.contact-title{
+			margin-bottom: .5em;
+			font-family: $main-font-family;
+			font-weight: 400;
+			font-size: 1.5em;
+			color: $color-menu;
+		}
+		.ct-text{
+			color: $color-menu;
+			font-family: $main-font-family;
+			line-height: 1.2;
+			font-weight: 300;
+			text-align: justify;
+
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 5px;	
+			background-color: #839933;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 5px;
+			height: 80%;
+			width: 5px;	
+			background-color: $color-button;
+		}
+	}
+	
+	.rotate-center{
+		display: block;
+		width: 70%;
+		height: 50%;
+		border: 5px solid $color-dec-line;
+		border-top-color: $second-color;
+		border-bottom-color: transparent;
+		border-radius: 2px;
+		animation: rotate-center 7s infinite alternate backwards;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			height: 50%;
+			width: 50%;
+			border: 4px solid $color-dec-line;
+			border-left-color: $second-color;
+			border-right-color: transparent;
+			border-radius: 2px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	.contact__button{
+		font-size: 1.1em;
+		text-transform: capitalize;
+		font-weight: 300;
+		background-color: $color-button;
+		color: $white-color;
+		&:hover{
+			background-color: darken($color-button, 20%);
+		}
+	}
+	.contacts_form{
+		padding-left: 31px;
+	}
+}
+@keyframes rotate-center {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

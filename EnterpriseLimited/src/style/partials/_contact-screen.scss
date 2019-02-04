@@ -1,0 +1,97 @@
+.contact-screen{
+	padding: 0 0 1em;
+	min-height: 700px;
+	color: $black-color;
+	position: relative;
+	background-image: url($img-path + 'contact-bg.jpg');
+	@include bg-settings;
+	.decor-row{
+		height: 30px;
+		background-color: #2b2c36;
+	}
+	.mb{
+		margin-bottom: 1em;
+	}
+	.contact__input{
+		background-color: rgba($black-color, .4);
+		color: $white-color;
+	}
+	.contact__textarea{
+		background-color: rgba($black-color, .4);
+		color: $white-color;
+	}
+	.contact-all-content{
+		padding: 2em 0 2em;
+		position: relative;
+		z-index: 1;;
+		.ct-title{
+			font-size: 45px;
+			font-weight: 400;
+			line-height: 1.5;
+			text-transform: uppercase;
+		}
+		.ct-text{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 1.5;
+		}
+	}
+	.wrapper-form{
+		position: relative;
+		z-index: 1;
+		margin-bottom: 2em;
+		.contact__button{
+			@include m-button(#FF2A58, #fff);	
+			font-size: 16px;
+			height: 50px;
+			line-height: 1.2;
+			padding: 12px 15px;
+
+		}
+	}
+	.decor-wrapper{
+		color: $black-color;
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+		text-align: center;
+		.text{
+			color: $white-color;
+			font-weight: 500;
+		}
+		.dc{
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				width: 42%;
+				height: 2px;
+				background-color: #48E7C1;
+				bottom: 0;
+				left: 28%;
+			}
+		}
+		.wrapp-phone{
+			min-width: 230px;
+			margin-bottom: 1em;
+			&::after{
+				bottom: 46%;
+			}
+			.phone-link{
+				display: block;
+				color: $red-color;
+			}
+		}
+		.wrapp-email{
+			.email-link{
+				color: $red-color;
+			}
+		}
+		.wrapp-text{
+			min-width: 230px;
+			margin-bottom: 1em;
+		}
+	}
+}

@@ -45,9 +45,9 @@ const config = {
     server: {
         baseDir: "./app"
     },
-    tunnel: true,
+    // tunnel: true,
     host: 'localhost',
-    port: 4000,
+    port: 8081,
     logPrefix: "Frontend_Devil"
 };
 
@@ -121,3 +121,63 @@ gulp.task('clean', function (cb) {
 gulp.task('build', gulp.parallel('html', 'js', 'style', 'image'));
 
 gulp.task('default', gulp.parallel('build', 'webserver', 'watch'));
+
+// MAIN- Buils
+
+    const mainPath = {
+    siteName: { 
+        html: 'siteName/',
+        js: 'siteName/js/',
+        css: 'siteName/css/',
+        img: 'siteName/images/',
+        fonts: 'siteName/fonts/'
+    },
+    src: {
+        html: 'src/*.html', 
+        js: 'src/js/main.js',
+        style: 'src/style/main.scss',
+        img: 'src/img/**/*.*', 
+        fonts: 'src/fonts/**/*.*'
+    },
+    clean: './siteName'
+};
+gulp.task('Main-html', () => {
+ return gulp.src(mainPath.src.html) 
+        .pipe(rigger()) 
+        .pipe(gulp.dest(mainPath.siteName.html));
+});
+gulp.task('Main-js', () => {
+return  gulp.src(mainPath.src.js) 
+        .pipe(rigger()) 
+        .pipe(sourcemaps.init()) 
+        .pipe(terser()) 
+        .pipe(sourcemaps.write())
+        .pipe(rename('app.min.js'))
+        .pipe(gulp.dest(mainPath.siteName.js));
+});
+gulp.task('Main-style', () => {
+ return  gulp.src(mainPath.src.style) 
+        .pipe(sourcemaps.init()) 
+        .pipe(sass()) 
+        .pipe(prefixer()) 
+        .pipe(cclean()) 
+        .pipe(sourcemaps.write())
+        .pipe(rename('app.min.css'))
+        .pipe(gulp.dest(mainPath.siteName.css));
+});
+// gulp.task('Main-image', () => {
+//  return gulp.src(mainPath.src.img) 
+//         .pipe(tiny('y6vBpNQt3CR2JSBRw1ZFDHpPXR84gKrR'))
+//         .pipe(gulp.dest(mainPath.siteName.img));
+// });
+gulp.task('Main-fonts', () => {
+ return  gulp.src(mainPath.src.fonts)
+        .pipe(gulp.dest(mainPath.siteName.fonts));
+});
+
+gulp.task('main-clean', function (cb) {
+    rimraf(mainPath.clean, cb);
+});
+
+gulp.task('main', gulp.parallel('Main-html', 'Main-js', 'Main-style', "Main-fonts"));
+

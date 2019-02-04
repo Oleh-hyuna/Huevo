@@ -5,8 +5,9 @@
 	font-size: 1.2em;
 	margin-bottom: .5em;
 	.columns{
-		min-height: 185px;
+		min-height: 200px;
 		padding: 1em;
+		cursor: pointer;
 		&:first-child{
 			background-color: #dee7ea;
 		}

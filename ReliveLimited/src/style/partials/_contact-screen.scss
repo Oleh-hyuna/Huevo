@@ -5,12 +5,13 @@
 	color: $text-color;
 	.st-contact-wrraper{
 		position: absolute;
-		width: 55%;
+		width: 40%;
 		height: 90%;
-		transform: translate(-33%, -8%);
+		transform: translate(-12%, -8%);
 		background-color: #ECECEC;
 		@media screen and (max-width: 1023px){
 			width: 100%;
+			transform: translate(-1%, -8%);
 		}
 	}
 	.contact-all-content{

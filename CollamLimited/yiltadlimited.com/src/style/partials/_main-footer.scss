@@ -1,0 +1,27 @@
+.main-footer{
+	color: $white-color;
+	background-color: rgba($color-header, .9);
+	padding: 1em;
+	.columns{
+		@media screen and (max-width: 1023px){
+				margin-bottom: 1em;
+			}
+	}
+	.fas{
+		color: $color-dec-line;
+	}
+	.email-link{
+		color: #dee7ea;
+		border-bottom: 2px solid $color-dec-line;
+		&:hover{
+			border-bottom: none;
+		}
+	}
+	.phone-link{
+		color: #dee7ea;
+		border-bottom: 2px solid $color-dec-line;
+		&:hover{
+			border-bottom: none;
+		}
+	}
+}

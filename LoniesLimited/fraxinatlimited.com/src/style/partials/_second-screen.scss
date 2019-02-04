@@ -1,0 +1,49 @@
+.second-section{
+	padding: 3em 0;
+	background-color: #F7F9FF;
+	background-image: url(https://avada.theme-fusion.com/law/wp-content/uploads/sites/24/2015/02/showeare-parallax.jpg);
+	@include bg-settings;
+	color: $white-color;
+	position: relative;
+	font-family: $second-font-family;
+	z-index: 5;
+	.second-wrp-content{
+		padding: 1em;
+		min-height: 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.second-title{
+			font-size: 28px;
+			font-weight: 700;
+			line-height: 1.4;
+			margin-bottom: 2em;
+			text-transform: uppercase;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				width: 80%;
+				height: 1px;
+				background-color: #444c56;;
+				left: 10%;
+				bottom: -50%;
+			}
+		}
+		.second-text{
+			font-size: 18px;
+			margin-bottom: 3em;
+			font-family: $second-font-family;
+			font-weight: 500;
+		}
+		.second-content__button {
+			@include button;
+			&:hover{
+				background-color: transparent;
+				border: 2px solid $button-color;
+				color: $button-color;
+			}
+		}
+	}
+}

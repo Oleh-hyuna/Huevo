@@ -3,7 +3,6 @@
 const gulp = require('gulp'),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     rigger = require('gulp-rigger'),
@@ -13,24 +12,25 @@ const gulp = require('gulp'),
     rimraf = require('rimraf'),
     rename = require("gulp-rename"),
     browserSync = require("browser-sync"),
+    terser = require('gulp-terser'),
     reload = browserSync.reload;
 
     const path = {
-    app: { //Тут мы укажем куда складывать готовые после сборки файлы
+    app: { 
         html: 'app/',
         js: 'app/js/',
         css: 'app/css/',
         img: 'app/images/',
         fonts: 'app/fonts/'
     },
-    src: { //Пути откуда брать исходники
-        html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-        js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+    src: {
+        html: 'src/*.html', 
+        js: 'src/js/main.js',
         style: 'src/style/main.scss',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: 'src/img/**/*.*', 
         fonts: 'src/fonts/**/*.*'
     },
-    watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+    watch: { 
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
@@ -44,49 +44,49 @@ const config = {
     server: {
         baseDir: "./app"
     },
-    tunnel: true,
+    // tunnel: true,
     host: 'localhost',
-    port: 3000,
+    port: 8081,
     logPrefix: "Frontend_Devil"
 };
 
 gulp.task('html', () => {
- return gulp.src(path.src.html) //Выберем файлы по нужному пути
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(gulp.dest(path.app.html)) //Выплюнем их в папку build
-        .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
+ return gulp.src(path.src.html) 
+        .pipe(rigger()) 
+        .pipe(gulp.dest(path.app.html)) 
+        .pipe(reload({stream: true})); 
 });
 
 gulp.task('js', () => {
-return  gulp.src(path.src.js) //Найдем наш main файл
-        .pipe(rigger()) //Прогоним через rigger
-        .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
-        .pipe(sourcemaps.write()) //Пропишем карты
+return  gulp.src(path.src.js) 
+        .pipe(rigger()) 
+        .pipe(sourcemaps.init()) 
+        .pipe(terser()) 
+        .pipe(sourcemaps.write())
         .pipe(rename('app.min.js'))
-        .pipe(gulp.dest(path.app.js)) //Выплюнем готовый файл в build
-        .pipe(reload({stream: true})); //И перезагрузим сервер
+        .pipe(gulp.dest(path.app.js)) 
+        .pipe(reload({stream: true})); 
 });
 gulp.task('style', () => {
- return  gulp.src(path.src.style) //Выберем наш main.scss
-        .pipe(sourcemaps.init()) //То же самое что и с js
-        .pipe(sass()) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
-        .pipe(cclean()) //Сожмем
+ return  gulp.src(path.src.style) 
+        .pipe(sourcemaps.init()) 
+        .pipe(sass()) 
+        .pipe(prefixer()) 
+        .pipe(cclean()) 
         .pipe(sourcemaps.write())
         .pipe(rename('app.min.css'))
-        .pipe(gulp.dest(path.app.css)) //И в build
+        .pipe(gulp.dest(path.app.css)) 
         .pipe(reload({stream: true}));
 });
 gulp.task('image', () => {
- return gulp.src(path.src.img) //Выберем наши картинки
-        .pipe(imagemin({ //Сожмем их
+ return gulp.src(path.src.img) 
+        .pipe(imagemin({ 
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.app.img)) //И бросим в build
+        .pipe(gulp.dest(path.app.img))
         .pipe(reload({stream: true}));
 });
 gulp.task('fonts', () => {
@@ -115,3 +115,61 @@ gulp.task('clean', function (cb) {
 gulp.task('build', gulp.parallel('html', 'js', 'style', 'image'));
 
 gulp.task('default', gulp.parallel('build', 'webserver', 'watch'));
+// MAIN- Buils
+
+    const mainPath = {
+    siteName: { 
+        html: 'siteName/',
+        js: 'siteName/js/',
+        css: 'siteName/css/',
+        img: 'siteName/images/',
+        fonts: 'siteName/fonts/'
+    },
+    src: {
+        html: 'src/*.html', 
+        js: 'src/js/main.js',
+        style: 'src/style/main.scss',
+        img: 'src/img/**/*.*', 
+        fonts: 'src/fonts/**/*.*'
+    },
+    clean: './siteName'
+};
+gulp.task('Main-html', () => {
+ return gulp.src(mainPath.src.html) 
+        .pipe(rigger()) 
+        .pipe(gulp.dest(mainPath.siteName.html));
+});
+gulp.task('Main-js', () => {
+return  gulp.src(mainPath.src.js) 
+        .pipe(rigger()) 
+        .pipe(sourcemaps.init()) 
+        .pipe(terser()) 
+        .pipe(sourcemaps.write())
+        .pipe(rename('app.min.js'))
+        .pipe(gulp.dest(mainPath.siteName.js));
+});
+gulp.task('Main-style', () => {
+ return  gulp.src(mainPath.src.style) 
+        .pipe(sourcemaps.init()) 
+        .pipe(sass()) 
+        .pipe(prefixer()) 
+        .pipe(cclean()) 
+        .pipe(sourcemaps.write())
+        .pipe(rename('app.min.css'))
+        .pipe(gulp.dest(mainPath.siteName.css));
+});
+// gulp.task('Main-image', () => {
+//  return gulp.src(mainPath.src.img) 
+//         .pipe(tiny('y6vBpNQt3CR2JSBRw1ZFDHpPXR84gKrR'))
+//         .pipe(gulp.dest(mainPath.siteName.img));
+// });
+gulp.task('Main-fonts', () => {
+ return  gulp.src(mainPath.src.fonts)
+        .pipe(gulp.dest(mainPath.siteName.fonts));
+});
+
+gulp.task('main-clean', function (cb) {
+    rimraf(mainPath.clean, cb);
+});
+
+gulp.task('main', gulp.parallel('Main-html', 'Main-js', 'Main-style', "Main-fonts"));

@@ -64,34 +64,26 @@ $("#contacts_form").on("submit", function (ev, elem) {
     ev.preventDefault();
 });
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "asdiroflimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhc2Rpcm9mbGltaXRlZC5jb20iLCJpYXQiOjE1NDg4NDQwMzY3NzUsImV4cCI6MTU4MDM4MDAzNjc3NSwiYXVkIjoiYXNkaXJvZmxpbWl0ZWQuY29tIiwic3ViIjoiYXNkaXJvZmxpbWl0ZWQuY29tIn0.Od96yNHQuNw_qWklTmdqAj3c2i39uLQ5E5-xNLtD6J8",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@asdiroflimited.com"
 });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
-    country_code: "UK",
+    site: "spiral-game.com", // Any site from the Company
+    corp_id: "640", // Company ID
+    country_code: "CY",
     addressContainer: $('.addressContainer')
 });
 
 window.onload = function () {
 
-  var blue = '#2980b9';
   var l = Snap('#logo');
-  var p = l.select('path');
-
-  l.append(p);
-
-  p.attr({
-    fill: blue,
-    stroke: '#0066CC',
-  });
+ 
   setTimeout( function() {
     // modify this one line below, and see the result !
-    var logoTitle = 'Coradio Limited';
+    var logoTitle = 'Asdirof Limited';
     var logoRandom = '';
     var logoTitleContainer = l.text(40, '98%', '');
     var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";

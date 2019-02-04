@@ -62,16 +62,16 @@ $("#contacts_form").on("submit", function (ev, elem) {
     ev.preventDefault();
 });
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "yiltadlimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5aWx0YWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0ODg0NDAyNTYzNywiZXhwIjoxNTgwMzgwMDI1NjM3LCJhdWQiOiJ5aWx0YWRsaW1pdGVkLmNvbSIsInN1YiI6InlpbHRhZGxpbWl0ZWQuY29tIn0.TpycqJJdQz5BqUb-PQD98PA0i9suuwxocaOpOKPAl9c",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@yiltadlimited.com"
 });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
-    country_code: "UK",
+    site: "aivanow.com", // Any site from the Company
+    corp_id: "638", // Company ID
+    country_code: "CY",
     addressContainer: $('.addressContainer')
 });
 

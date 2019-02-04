@@ -1,5 +1,8 @@
 .second-screen{
-	margin-bottom: 2em;
+	padding: 6em 0;
+	@media screen and (max-width: 1023px){
+		padding: .5em 0;
+	}
 	.bg-img{
 		background-image: url($img-path + 'second-bg.jpeg');
 		background-size: cover;

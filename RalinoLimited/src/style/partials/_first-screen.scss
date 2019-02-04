@@ -8,10 +8,13 @@
 	background-size: cover;
 	background-position: 50% 50%;
 	.main-header{
+		.wrp-logo-img{
+			width: 90px;
+		}
 		.st-row{
 			border-bottom: 1px solid rgba($white-color, .5);
 			@media screen and (max-width: 639px){
-				padding-top: 1em;
+				padding: 1em 0;
 			}
 		}
 		&.fixed-menu-nav{
@@ -21,6 +24,7 @@
 			top: 0; 
 			width: 100%;
 			background-color: $white-color;
+			box-shadow: 0 1px 8px #000;
 			.fixed-menu-color{
 				color: #303030;
 			}
@@ -38,18 +42,17 @@
 		}
 		&__lnk-logo{
 			display: flex;
-			align-items: baseline;
-			padding-top: 10px;
+			align-items: center;
 			.logo-text{
 				display: block;
 				font-family: $main-font-family;
-				font-weight: 700;
+				font-weight: 400;
 				color: $text-color;
-				font-size: 4em;
+				font-size: 2.4em;
 			}
 		}
 		.main-menu{
-			min-height: 80px;
+			min-height: 110px;
 			display: flex;
 			align-items: center;
 			&__items{

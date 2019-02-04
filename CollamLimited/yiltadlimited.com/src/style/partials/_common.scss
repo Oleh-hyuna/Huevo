@@ -1,0 +1,16 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: $main-color-text;
+    font-size: $main-font-size;
+    font-family: $main-font-family;
+    overflow-x:hidden; 
+}
+ul {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+    margin: 0;
+}

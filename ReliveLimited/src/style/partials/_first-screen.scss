@@ -42,9 +42,9 @@
 			left: 0; 
 			top: 0; 
 			width: 100%;
-			background-color: $white-color;
+			background-color: rgba($black-color, .6);
 			.fixed-menu-color{
-				color: #303030;
+				color: #ffff;
 			}
 		}
 		&__wrp-logo{

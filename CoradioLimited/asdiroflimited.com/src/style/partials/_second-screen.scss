@@ -1,0 +1,100 @@
+.second-screen{
+	padding: 6em 0;
+	.bg-img{
+		background-image: url($img-path + 'second-bg.jpeg');
+		background-size: cover;
+		background-position: 0 50%;
+		border-bottom-right-radius: 10%;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 5%;
+			right: 3%;
+			width: 30px;
+			height: 30px;
+			background-color: #fff;
+			border-radius: 50%;
+			z-index: 1;
+		}
+	}
+	.second-wrp-content{
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		padding: 1em;
+		.add-wrrap{
+			font-size: 1.2em;
+			padding: 1em;
+			background-color: #fff;
+			color: $color-menu;
+			box-shadow: 0 10px 40px rgba(0,0,0, .6);
+			position: relative;
+			&::before{
+				content: '';
+				position: absolute;
+				top: 5%;
+				right: 5.3%;
+				width: 15px;
+				height: 15px;
+				background-color: $color-button;
+				border-radius: 50%;
+				transition-duration: 0.4s;
+			}
+			&::after{
+				content: '';
+				position: absolute;
+				top: 10%;
+				right: 5%;
+				width: 20px;
+				height: 20px;
+				background-color:#839933;
+				border-radius: 50%;
+				transition-duration: 0.4s;
+				transition-delay: 0.2s;
+			}
+			&:hover::before{
+				width: 100%;
+				height: 5px;
+				top: 0;
+				right: 0;
+				border-radius: 0;
+				transition-duration: 0.3s;
+			}
+			&:hover::after{
+				width: 80%;
+				height: 5px;
+				top: 5px;
+				right: 0;
+				border-radius: 0;
+				transition-duration: 0.4s;
+			}
+			.second-title{
+				margin-bottom: .5em;
+				font-family: $main-font-family;
+				font-weight: 400;
+				font-size: 1.5em;
+			}
+			.second-text{
+				font-family: $main-font-family;
+				line-height: 1.2;
+				margin-bottom: .5em;
+				font-weight: 300;
+				text-align: justify;
+			}
+			.about-us__button {
+				font-size: .9em;
+				text-transform: capitalize;
+				font-weight: 300;
+				background-color: $color-button;
+				color: $white-color;
+				&:hover{
+					background-color: darken($color-button, 20%);
+				}
+			}
+
+		}
+	}
+}

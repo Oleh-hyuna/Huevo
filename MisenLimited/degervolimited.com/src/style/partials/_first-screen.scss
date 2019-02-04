@@ -1,0 +1,191 @@
+.main-section{
+	min-height: 100vh;
+	max-width: 100%;
+	position: relative;
+	background-color: transparent;
+	background-image: url($img-path + 'home-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	.main-header{
+		.st-row{
+			@media screen and (max-width: 639px){
+				padding: 1em 0;
+			}
+		}
+		&.fixed-menu-nav{
+			z-index: 9999;
+			position: fixed; 
+			left: 0; 
+			top: 0; 
+			width: 100%;
+			background-color: $header-bg-color;
+			.fixed-menu-color{
+				color: $text-color;
+			}
+		}
+		&__wrp-logo{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.logo-color {
+				fill: $white-color;
+			}
+			.fixed-logo-color{
+				fill: #303030;
+			}
+		}
+		&__lnk-logo{
+			display: flex;
+			align-items: center;
+			.logo-img {
+				max-width: 30px;
+				height: 42px;
+				margin-right: .5em;
+			}
+			.logo-text{
+				display: block;
+				font-family: $main-font-family;
+				font-weight: 500;
+				color: $text-color;
+				font-size: 1.5em;
+				line-height: 1;
+			}
+		}
+		.main-menu{
+			min-height: 80px;
+			display: flex;
+			align-items: center;
+			&__items{
+
+			}
+			&__list{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media screen and (max-width: 639px){
+					display: block;
+				}
+			}
+			&__link{
+				text-transform: capitalize;
+				font-size: 16px;
+				font-weight: 600;
+				color: $text-color;
+				font-family: $main-font-family;
+				position: relative;
+				&:hover &.active{
+					border: 0;
+				}
+				&.active{
+					color: $light-green;
+					border-bottom: 2px solid $light-green;
+					&:hover {
+						border: 0;
+					}
+				}
+				&:hover{
+					color: $light-green;
+				}
+				@media screen and (min-width: 630px){
+					&::before{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out, left .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&::after{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&:hover::before{
+						width: 50%;
+						left: 0;
+					}
+					&:hover::after{
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+	.main-content{
+		min-height: 70vh;
+		display: flex;
+		text-align: left;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: flex-start;
+		color: $text-color;
+		padding: 2em 3em;
+		font-family: $main-font-family;
+		border-left: 1px solid rgb(91, 86, 178);
+		position: relative;
+		@media screen and (max-height: 650px){
+				border: none;
+			}
+		.decor-text{
+			position: absolute;
+			transform: rotate(-90deg);
+			left: -4em;
+			bottom: -5em;
+			text-transform: uppercase;
+			font-weight: 300;
+			@media screen and (max-height: 650px){
+				display: none;
+			}
+		}
+		&__title{
+			margin-bottom: .5em;
+			& > * {
+				font-size: 65px;
+				font-weight: 700;
+				line-height: 1;
+				@media screen and (max-width: 500px){
+					font-size: 50px;
+				}
+			}
+		}
+		&__subtitle{
+			font-weight: 300;
+			font-size: 21px;
+			line-height: 1.5;
+			color: rgb(68, 167, 255);
+			margin-bottom: 2.5em;
+			@media screen and (max-width: 500px){
+				font-size: 18px;
+				text-align: justify;
+			}
+		}
+		&__button{
+			@include button;
+			position: relative;
+			padding-left: 25px;
+			&::after{
+				color: $light-green;
+				content: '';
+				position: absolute;
+				border: 7px solid transparent;
+				border-right: solid currentColor;
+				border-top: solid currentColor;;
+				top: 50%;
+				transform: translateY(-60%) rotate(45deg);
+				right: 13%;
+				background-color: transparent;
+			}	
+		}
+	}
+}

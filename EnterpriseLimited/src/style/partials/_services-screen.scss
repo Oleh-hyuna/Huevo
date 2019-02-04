@@ -1,0 +1,136 @@
+.services-section{
+	padding: 3em 0 0;
+	color: $black-color;
+	background-color: #F7F7F7;
+	font-family: $main-font-family;
+	position: relative;
+	@media screen and (min-width: 1023px){
+		min-height: 225px;
+	}
+	.row:last-child {
+		@media screen and (min-width: 1023px){
+			position: absolute;
+			// transform: translateY(100%);
+			left: 50%;
+			transform: translate(-50%, 25%);
+		}
+	}
+	.columns{
+		cursor: pointer;
+		&:hover .content-wrapper{
+			transform: rotateX(180deg);
+		}		
+		&:hover .ft::after, &:hover .sc::after, &:hover .th::after{
+			opacity: 1;
+			transition-property: opacity;
+			transition-delay: .5s;
+			animation: test .1s linear .5s forwards;
+		}
+		&:not(:hover) .ft::after, &:not(:hover) .sc::after, &:not(:hover) .th::after{
+			transition: all .4s;
+			animation: test-1 .1s linear 0s forwards;
+		}
+	}
+	.wrap-icon{
+		margin-bottom: .3em;
+		& i {
+			font-size: 30px;
+		}
+	}
+	.st-columns {
+		@include max-1023{
+			margin-bottom: .5em;
+		}
+		.content-wrapper{
+			min-height: 330px;
+			padding: 10px;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: all 1.5s;
+			background-color: #fff;
+			@include max-1023{
+				min-height: 100px;
+			}
+			.wrap-icon{
+				backface-visibility: hidden;
+			}
+			.icon-wrapper{
+				margin-bottom: 35px;
+				display: flex;
+				justify-content: center;
+			}
+			.serv-title{
+				backface-visibility: hidden;
+				min-height: 48px;
+				text-transform: uppercase;
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1.5;
+				letter-spacing: 1px;
+				margin-bottom: .8em;
+			}
+			.serv-subtitle{
+				backface-visibility: hidden;
+				font-size: 14px;
+				font-weight: 300;
+				color: $text-color-subtitle;
+				line-height: 1.8;
+				@include max-1023{
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}	
+}
+.ft::after, .sc::after, .th::after{
+	content: '';
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(180deg);
+	opacity: 1;
+	z-index: -1;
+	opacity: 0;
+	transform-style: flat;
+	@include bg-settings;
+}
+.sc::after{
+	background-image: url($img-path + 'why.jpg');
+}
+.ft::after{
+	background-image: url($img-path + 'device.jpg');
+}
+.th::after{
+	background-image: url($img-path + 'happy.jpg');
+}
+
+@keyframes test {
+	0%{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+}
+@keyframes test-1 {
+	0%{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	100%{
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+}

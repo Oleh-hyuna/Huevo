@@ -1,0 +1,169 @@
+.main-section{
+	min-height: 80vh;
+	max-width: 100%;
+	position: relative;
+	background-color: transparent;
+	background-image: url($img-path + 'main-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	.main-header{
+		.wrp-logo-img{
+			width: 90px;
+		}
+		.st-row{
+			border-bottom: 1px solid rgba($white-color, .5);
+			@media screen and (max-width: 639px){
+				padding: 1em 0;
+			}
+		}
+		&.fixed-menu-nav{
+			z-index: 9999;
+			position: fixed; 
+			left: 0; 
+			top: 0; 
+			width: 100%;
+			background-color: $white-color;
+			box-shadow: 0 1px 8px #000;
+			.fixed-menu-color{
+				color: #303030;
+			}
+		}
+		&__wrp-logo{
+			height: 100%;
+			display: flex;
+			align-items: center;
+			.logo-color {
+				fill: $white-color;
+			}
+			.fixed-logo-color{
+				fill: #303030;
+			}
+		}
+		&__lnk-logo{
+			display: flex;
+			align-items: center;
+			.logo-text{
+				display: block;
+				font-family: $main-font-family;
+				font-weight: 400;
+				color: $text-color;
+				font-size: 3em;
+			}
+		}
+		.main-menu{
+			min-height: 110px;
+			display: flex;
+			align-items: center;
+			&__items{
+
+			}
+			&__list{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				@media screen and (max-width: 639px){
+					display: block;
+				}
+			}
+			&__link{
+				text-transform: uppercase;
+				font-size: 1em;
+				font-weight: 500;
+				color: $text-color;
+				font-family: $main-font-family;
+				position: relative;
+				&:hover &.active{
+					border: 0;
+				}
+				&.active{
+					color: $light-green;
+					border-bottom: 2px solid $light-green;
+					&:hover {
+						border: 0;
+					}
+				}
+				@media screen and (min-width: 630px){
+					&::before{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out, left .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&::after{
+						display: block;
+						position: absolute;
+						content: "";
+						height: 2px;
+						width: 0;
+						background-color: $light-green;
+						transition: width .5s ease-in-out;
+						left: 50%;
+						bottom: 0;
+					}
+					&:hover::before{
+						width: 50%;
+						left: 0;
+					}
+					&:hover::after{
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+	.main-content{
+		min-height: 60vh;
+		display: flex;
+		text-align: left;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		color: $black-color;
+		z-index: 1;
+		padding: 2em;
+		@media screen and (max-width: 726px){
+			transform: translate(0, 0) !important;
+		}
+		&__title{
+			& > * {
+				font-family: $main-font-family;
+				font-size: 50px;
+				font-weight: 600;
+				line-height: 1.2;
+			}
+			& span{
+				// font-size: 1.7em;
+				font-family: $main-font-family;
+				font-style: italic;
+				font-weight: 400;
+			}
+		}
+		&__subtitle{
+			font-weight: 400;
+			font-size: 1.3em;
+			font-family: $second-font-family;
+			line-height: 1.7;
+			margin-bottom: .9em;
+		}
+		&__button{
+			@include button;		
+		}
+	}
+}
+
+@keyframes matrix3d{
+	0%, 100%{
+		transform: matrix3d(1,	0,	0,	0, 0,	1,	0,	0, 0,	0,	1,	0, 0,	0,	0,	1);
+	}
+	50%{
+		transform: matrix3d(1.08711, 0.000119325, 0, 0, -0.000119325, 1.08711, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+		transform-origin: 0% 0% 0px;
+	}
+}

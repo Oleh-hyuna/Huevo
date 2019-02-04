@@ -74,16 +74,16 @@ $("#contacts_form").on("submit", function (ev, elem) {
 });
 ////Form
 $("#contacts_form").ajaxEmailSender({
-    domain: "yelmedlimited.com", // Corp Group URL
-    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsImlhdCI6MTU0NjQ0ODE1MzA0NCwiZXhwIjoxNTc3OTg0MTUzMDQ0LCJhdWQiOiJ5ZWxtZWRsaW1pdGVkLmNvbSIsInN1YiI6InllbG1lZGxpbWl0ZWQuY29tIn0.RpWwIO4el1ITGhTKDOR4I2vqrrTDEYKCuW2IBpoM_cI",
+    domain: "fraxinatlimited.com", // Corp Group URL
+    autorizationToken: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmcmF4aW5hdGxpbWl0ZWQuY29tIiwiaWF0IjoxNTQ4ODQ0MTAwNDkzLCJleHAiOjE1ODAzODAxMDA0OTMsImF1ZCI6ImZyYXhpbmF0bGltaXRlZC5jb20iLCJzdWIiOiJmcmF4aW5hdGxpbWl0ZWQuY29tIn0.5wA1IJNGIfMzu5yEPiKTM-FPSnCmkM-TIm2UnRtA6yQ",
     event: "formvalid.zf.abide",
-    supportEmail: "support@yelmedlimited.com"
+    supportEmail: "support@fraxinatlimited.com"
   });
 
 var getAddress = ({
-    site: "musetimes.com", // Any site from the Company
-    corp_id: "514", // Company ID
-    country_code: "UK",
+    site: "flamestars.com", // Any site from the Company
+    corp_id: "650", // Company ID
+    country_code: "CY",
     addressContainer: $('.addressContainer')
   });
 

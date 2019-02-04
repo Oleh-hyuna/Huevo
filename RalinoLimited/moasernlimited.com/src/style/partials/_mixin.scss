@@ -1,0 +1,31 @@
+@mixin button {
+  height: 50px;
+  padding: 12px 35px;
+  font-weight: 400;
+  font-family: $main-font-family;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $white-color;
+  text-align: center;
+  background-color: $button-color;
+  border-radius: 25px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  &:hover{
+    background-color: transparent;
+    border: 2px solid $button-color;
+    color: $button-color;
+  }
+}
+@mixin max-1023 {
+  @media screen and (max-width: 1023px){
+    @content;
+  }
+}
+
+@mixin max-639 {
+  @media screen and (max-width: 639px){
+    @content;
+  }
+}

@@ -1,0 +1,45 @@
+@mixin m-button($bg-color, $hover-bg) {
+  height: 60px;
+  padding: 12px 35px;
+  font-weight: 500;
+  font-family: $main-font-family;
+  font-size: 18px;
+  color: $bg-color;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid $bg-color;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    background-color: $hover-bg;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 1s;
+    z-index: -1;
+  }
+  &:hover::after{
+    height: 100%;
+  }
+}
+@mixin bg-settings {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+@mixin max-1023 {
+  @media screen and (max-width: 1023px){
+    @content;
+  }
+}
+
+@mixin max-639 {
+  @media screen and (max-width: 639px){
+    @content;
+  }
+}

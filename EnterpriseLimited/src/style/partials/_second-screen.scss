@@ -1,0 +1,41 @@
+.second-section{
+	padding: 25em 0 10em;
+	background-color: #ffffff;
+	color: $text-color-second;
+	background-image: url($img-path + 'second-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+	min-height: 700px;
+	@include max-1023{
+		padding: 2em 0;
+	}
+	@media screen and (max-width: 740px){
+		min-height: 100px;
+	}
+	.wrraper-all-title{
+		color: #000;
+	}
+	.second-wrp-content{
+		margin-bottom: 2em;
+		padding: 1em;
+		@include max-1023{
+			text-align: center;
+		}
+		.second-title{
+			color: #000;
+			font-size: 45px;
+			font-weight: 400;
+			line-height: 1.2;
+			text-transform: uppercase;
+			margin-bottom: .1em;
+		}
+		.second-text{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.7;
+			color: $text-color-subtitle;
+			margin-bottom: 1em;
+		}
+	}
+}

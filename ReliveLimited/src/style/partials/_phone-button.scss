@@ -4,7 +4,7 @@
     right: 20px;
     top: 20px;
     cursor: pointer;
-    background: #111;
+    background: #fff;
     box-sizing: border-box;
     background-clip: content-box;
     width: 30px;
@@ -20,7 +20,7 @@
     &:after {
       content: "";
       position: absolute;
-      background: #111;
+      background: #fff;
       height: 2px;
       width: 100%;
       right: 0;
@@ -42,13 +42,13 @@
     &.active:before {
       transform: rotate(135deg);
       top: 0;
-      background: #eee;
+      background: #fff;
       width: 110%;
     }
     &.active:after {
       bottom: 0;
       transform: rotate(-135deg);
-      background: #eee;
+      background: #fff;
       width: 110%;
     }
   }
