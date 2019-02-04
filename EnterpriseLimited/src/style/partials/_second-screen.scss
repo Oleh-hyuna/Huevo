@@ -29,6 +29,9 @@
 			line-height: 1.2;
 			text-transform: uppercase;
 			margin-bottom: .1em;
+			@media screen and (max-width: 700px){
+				font-size: 25px;
+			} 
 		}
 		.second-text{
 			font-size: 16px;
