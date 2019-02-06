@@ -1,0 +1,51 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $main-color-text;
+  font-size: 13px;
+  font-family: $main-font-family;
+
+}
+@font-face {
+  font-family: 'Myfont';
+  src: url('../fonts/myfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/myfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/myfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../fonts/myfont.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/myfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/myfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p{
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
+.active{
+  color: #E3872D !important;
+  position: relative;
+  transition: all .5s;
+  padding-left: 20px;
+  border-bottom: 1px solid currentColor; 
+}
+.mb{
+  margin-bottom: 2em;
+}
+::-webkit-input-placeholder {color:#ffffff;}
+::-moz-placeholder          {color:#ffffff;}
+:-moz-placeholder           {color:#ffffff;}
+:-ms-input-placeholder      {color:#ffffff;}
+
+@media screen and (min-width: 750px){
+  .wrap-test{
+    padding-left: 250px;
+  } 
+}
+
